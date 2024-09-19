@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import RegisterUser from "./components/RegisterUser";
 import CheckInOut from "./components/CheckInOut";
-import UserStatus from "./components/UserStatus";
+import AdminDashboard from "./components/AdminDashboard";
 import "./App.css";
 
 function App() {
@@ -37,7 +37,7 @@ function App() {
           />
           <Route path="/register" element={<RegisterUser />} />
           <Route path="/check-in-out" element={<CheckInOut />} />
-          <Route path="/user-status" element={<UserStatus />} />
+          <Route path="/admin" element={<AdminDashboard />} />
         </Routes>
       </div>
     </Router>

@@ -3,11 +3,14 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const db = require('./db'); 
+const adminRoutes = require('./routes/adminRoutes');
 const userRoutes = require('./routes/userRoutes'); 
 
 const app = express();
 app.use(express.json()); // Parse incoming JSON requests
 app.use(cors());
+
+app.use('/api/admin', adminRoutes);
 
 // Use the user routes
 app.use('/api/users', userRoutes);
