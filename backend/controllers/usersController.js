@@ -8,12 +8,12 @@ const { use } = require('../routes/userRoutes');
 ------------------------- */
 exports.registerUser = (req, res) => {
     const { name, PIN } = req.body;
-    const userId = crypto.randomBytes(6).toString('hex');
+    const userId = crypto.randomBytes(3).toString('hex').slice(0, 5).toUpperCase();
     const sql = 'INSERT INTO users (id, name, PIN) VALUES (?, ?, ?)';
 
     db.query(sql, [userId, name, PIN], (err, result) => {
         if (err) throw err;
-        res.json({ message: 'User registered', id: result.insertId });
+        res.json({ message: 'User registered', name: name, userId });
     });
 };
 
