@@ -1,7 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import RegisterUser from "./components/RegisterUser";
-import CheckInOut from "./components/CheckInOut";
+import CheckIn from "./components/CheckIn";
+import CheckOut from "./components/CheckOut";
 import AdminDashboard from "./components/AdminDashboard";
 import "./App.css";
 
@@ -9,11 +10,9 @@ function App() {
   return (
     <Router>
       <div>
-        <h1>Visitor Clock-in System</h1>
-
         {/* Navigation Links */}
         <nav>
-          <ul>
+          <ul className="flex-x">
             <li>
               <Link to="/">Home</Link>
             </li>
@@ -21,10 +20,13 @@ function App() {
               <Link to="/register">Register User</Link>
             </li>
             <li>
-              <Link to="/check-in-out">Check In/Out</Link>
+              <Link to="/check-in">Check In</Link>
             </li>
             <li>
-              <Link to="/user-status">User Status</Link>
+              <Link to="/check-out">Check Out</Link>
+            </li>
+            <li>
+              <Link to="/admin">Admin Dashboard</Link>
             </li>
           </ul>
         </nav>
@@ -36,7 +38,8 @@ function App() {
             element={<h2>Welcome to the Visitor Clock-in System</h2>}
           />
           <Route path="/register" element={<RegisterUser />} />
-          <Route path="/check-in-out" element={<CheckInOut />} />
+          <Route path="/check-in" element={<CheckIn />} />
+          <Route path="/check-out" element={<CheckOut />} />
           <Route path="/admin" element={<AdminDashboard />} />
         </Routes>
       </div>

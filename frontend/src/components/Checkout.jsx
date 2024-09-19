@@ -22,7 +22,7 @@ const CheckInOut = () => {
 
   return (
     <div>
-      <h2>Check In/Out</h2>
+      <h2>Check Out</h2>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
