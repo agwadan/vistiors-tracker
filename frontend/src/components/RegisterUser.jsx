@@ -14,10 +14,10 @@ const RegisterUser = () => {
         "http://localhost:3000/api/users/register",
         { name, PIN }
       );
-      console.log("====================================");
-      console.log(response);
-      console.log("====================================");
-      alert(`${name} registered successfully. This is the user ID: ${userId}`);
+
+      setMessage(
+        `${name} registered successfully. This is the user ID: ${response.data.userId}`
+      );
     } catch (error) {
       setMessage("Error registering user");
     }
@@ -57,6 +57,7 @@ const RegisterUser = () => {
             </div>
             <button type="submit">Register</button>
           </form>
+          {message && <p>{message}</p>}
         </div>
       </div>
     </div>

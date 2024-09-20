@@ -30,6 +30,10 @@ PORT=3000
 3. **Install dependencies**
    `npm install`
 
+   4. **Import database**
+
+- Get the database file from the database_export directory and import it to be used on your local server.
+
 4. **Start Backend**
    `npm start`
 
