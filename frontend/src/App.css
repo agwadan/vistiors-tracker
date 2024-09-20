@@ -11,6 +11,11 @@ a {
   text-decoration: none;
 }
 
+.grid-2 {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
 .flex-x {
   display: flex;
   flex-direction: row;
@@ -30,9 +35,6 @@ nav ul li {
 
 nav ul li:hover {
   background-color: rgb(7, 134, 134);
-}
-
-.dashboard {
 }
 
 .dashboard .card {
@@ -68,4 +70,68 @@ nav ul li:hover {
 .dashboard td {
   border-left: 1px solid black;
   text-align: center;
+}
+
+.check {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  text-align: center;
+  color: #349b9b;
+}
+
+.check form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.check button {
+  padding: 1rem;
+  border: none;
+  background-color: #349b9b;
+  color: white;
+  border-radius: 5px;
+}
+
+.check .form-control {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.check input {
+  padding: 0.5rem;
+  border: 2px solid rgba(255, 149, 0, 0.689);
+  border-radius: 5px;
+}
+
+.register {
+  margin-top: 3rem;
+}
+
+.register h2 {
+  margin: 2rem;
+}
+
+.finger-scanner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-right: solid 5px rgba(255, 166, 0, 0.492);
+  align-items: center;
+}
+
+.finger-scanner h3 {
+  text-align: center;
+}
+
+.finger-scanner img {
+  height: 20rem;
 }

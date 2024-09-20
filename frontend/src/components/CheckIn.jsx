@@ -3,6 +3,7 @@ import axios from "axios";
 
 const CheckInOut = () => {
   const [userId, setUserId] = useState("");
+  const [userPIN, setUserPIN] = useState("");
   const [message, setMessage] = useState("");
 
   const handleSubmit = async (e) => {
@@ -21,17 +22,32 @@ const CheckInOut = () => {
   };
 
   return (
-    <div>
+    <div className="check">
       <h2>Check In</h2>
       <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="User ID"
-          value={userId}
-          onChange={(e) => setUserId(e.target.value)}
-          required
-        />
-        <button type="submit">Submit</button>
+        <div className="form-control">
+          <label htmlFor="userId">User ID</label>
+          <input
+            type="text"
+            name="userId"
+            placeholder="User ID"
+            value={userId}
+            onChange={(e) => setUserId(e.target.value)}
+            required
+          />
+        </div>
+        <div className="form-control">
+          <label htmlFor="PIN">PIN</label>
+          <input
+            type="password"
+            name="PIN"
+            placeholder="PIN"
+            value={userPIN}
+            onChange={(e) => setUserPIN(e.target.value)}
+            required
+          />
+        </div>
+        <button type="submit">Check In </button>
       </form>
       {message && <p>{message}</p>}
     </div>
