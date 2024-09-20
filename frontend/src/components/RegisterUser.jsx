@@ -14,7 +14,10 @@ const RegisterUser = () => {
         "http://localhost:3000/api/users/register",
         { name, PIN }
       );
-      alert(`${name} registered successfully`);
+      console.log("====================================");
+      console.log(response);
+      console.log("====================================");
+      alert(`${name} registered successfully. This is the user ID: ${userId}`);
     } catch (error) {
       setMessage("Error registering user");
     }

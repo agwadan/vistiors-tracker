@@ -13,6 +13,7 @@ const CheckInOut = () => {
         "http://localhost:3000/api/users/check-in",
         {
           userId,
+          userPIN,
         }
       );
       setMessage(response.data.message);
